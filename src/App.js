@@ -26,7 +26,7 @@ const App = () => {
       />
       <h1 id='text' 
       style={{top:`-${100 + offset * 0.3 + '%'}`}}>
-        Welcome to NEP-SHIRTS</h1>
+        </h1>
     </section>
 
     <section className='B'>
