@@ -15,18 +15,20 @@ body {
   position: relative;
 }
 
-nav {
+.navbar {
   width: 100%;
   height: 15vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  position: fixed;
+  position: -webkit-sticky;
+  position: sticky;
   top: 0;
-  z-index: 5;
+  background-color: transparent;
+  z-index: 10;
 }
 
-nav .head1 {
+.navbar .head1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -42,7 +44,7 @@ nav .head1 {
           align-items: center;
 }
 
-nav .head1 h1 {
+.navbar .head1 h1 {
   font-size: 20px;
   color: #dc143c;
   display: -webkit-box;
@@ -56,15 +58,15 @@ nav .head1 h1 {
   font-family: 'Montserrat Alternates', sans-serif;
 }
 
-nav .head1 h1 span {
+.navbar .head1 h1 span {
   font-size: 43px;
   color: #003893;
   font-weight: bolder;
 }
 
-nav .head2 {
+.navbar .head2 {
   width: 70%;
-  height: 70%;
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -75,7 +77,7 @@ nav .head2 {
   padding: 0 7% 0 0;
 }
 
-nav .head2 .links {
+.navbar .head2 .links {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -85,94 +87,182 @@ nav .head2 .links {
           justify-content: right;
 }
 
-nav .head2 .links a {
+.navbar .head2 .links a {
   text-decoration: none;
   color: #dc143c;
   margin: 0 2%;
   font-weight: bolder;
 }
 
-.A {
-  margin-top: 15vh;
-  position: relative;
+.navbarChange {
   width: 100%;
-  height: 100vh;
-  overflow: hidden;
+  height: 15vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background-color: black;
+  z-index: 10;
+}
+
+.navbarChange .head1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 30%;
+  height: 100%;
+  background-color: transparent;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navbarChange .head1 h1 {
+  font-size: 20px;
+  color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  letter-spacing: 1ch;
+  font-family: 'Montserrat Alternates', sans-serif;
+}
+
+.navbarChange .head1 h1 span {
+  font-size: 43px;
+  color: #ffffff;
+  font-weight: bolder;
+}
+
+.navbarChange .head1 h1 span:hover {
+  color: #dc143c;
+}
+
+.navbarChange .head1 h1:hover {
+  color: #003893;
+}
+
+.navbarChange .head2 {
+  width: 70%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: transparent;
+  padding: 0 7% 0 0;
+}
+
+.navbarChange .head2 .links {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+}
+
+.navbarChange .head2 .links a {
+  text-decoration: none;
+  color: #ffffff;
+  margin: 0 2%;
+  font-weight: bolder;
+}
+
+.navbarChange .head2 .links a:hover {
+  color: #dc143c;
+}
+
+.A {
+  margin: 0;
+  top: 0;
+  width: 100%;
+  height: 85vh;
+}
+
+.A .para {
   background-image: url(./img/welcome.png);
   background-repeat: no-repeat;
   background-size: contain;
-  background-position: 700px 80px;
+  background-position: 700px 78px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  width: 100%;
+  height: 96vh;
+  position: relative;
+  background-attachment: fixed;
 }
 
-.A .welcome {
-  width: 100%;
+.A .para .welcome {
+  width: 50%;
   height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  position: relative;
+  font-size: 2rem;
 }
 
-.A .welcome .content {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  width: 60%;
-  padding: 10%;
-  font-size: 30px;
-  font-weight: bolder;
+.A .para .welcome .text {
+  margin-top: 20%;
   position: absolute;
-  left: 10%;
-}
-
-.A .welcome .image {
-  width: 100%;
-  height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.A::before {
-  content: '';
-  position: absolute;
-  width: 100%;
-  background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(white));
-  background: linear-gradient(transparent, white);
-  bottom: 0;
-}
-
-#img2 {
-  position: absolute;
-  -webkit-transform: translateY(-10%);
-          transform: translateY(-10%);
-  z-index: 100;
-}
-
-#img3 {
-  position: absolute;
-  z-index: 100;
-}
-
-#text {
-  width: 100%;
-  position: absolute;
-  -webkit-transform: translateY(40%);
-          transform: translateY(40%);
-  z-index: 200;
+  left: 21%;
+  height: auto;
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(145, 83, 83, 0.397)), to(#003893b9));
+  background-image: linear-gradient(to right, rgba(145, 83, 83, 0.397), #003893b9);
+  color: #dc143cef;
+  padding: 10% 5%;
+  border-right: 1rem solid;
+  border-radius: 50%;
 }
 
 .B {
-  background-color: aquamarine;
-  margin: 0;
+  margin-top: 5%;
+  background-image: url(https://img.freepik.com/free-vector/realistic-studio-lights-empty-background-design_1017-27233.jpg?size=626&ext=jpg&ga=GA1.2.871503001.1640476800);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0px 0px;
+  height: 200vh;
+  background-attachment: fixed;
+  padding: 15vh 0 0 5%;
 }
 
-.B h1 {
+.B .tshirthead {
+  text-align: center;
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-size: 2rem;
+  color: #003893;
+}
+
+.B div.gallery {
+  margin: 2% 2%;
+  border: 1px solid #ccc;
+  float: left;
+  width: 20%;
+}
+
+.B div.gallery:hover {
+  border: 1px solid #777;
+  -webkit-transform: scaleX(200px);
+          transform: scaleX(200px);
+}
+
+.B div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+.B div.desc {
+  padding: 15px;
   text-align: center;
 }
 /*# sourceMappingURL=index.css.map */
